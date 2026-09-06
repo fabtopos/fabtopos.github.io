@@ -143,6 +143,20 @@
       padding: 1.5rem;
     }
 
+    .home-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 220px;
+      gap: 1.5rem;
+      align-items: start;
+    }
+
+    .profile-image {
+      width: 100%;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      object-fit: cover;
+    }
+
     a {
       color: var(--accent);
     }
@@ -182,6 +196,14 @@
       .card {
         padding: 1rem;
       }
+
+      .home-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .profile-image {
+        max-width: 220px;
+      }
     }
   </style>
 </head>
@@ -209,9 +231,10 @@
   </nav>
 
   <main id="main-content">
-    <section id="home-panel" role="tabpanel" aria-labelledby="home-tab" class="card">
-      <h2 id="about-heading">About Me</h2>
-      <p>
+    <section id="home-panel" role="tabpanel" aria-labelledby="home-tab" class="home-layout">
+      <div class="card">
+        <h2 id="about-heading">About Me</h2>
+        <p>
         Hi there, I'm Fabrice, a PhD student in mathematics at Clemson University with a passion for understanding the structures that shape complex systems.
 
 My journey into mathematics began through physics. After earning degrees in Theoretical Physics from the University of Antananarivo, I found myself increasingly drawn to the mathematical ideas that lay beneath the formulas. The search for underlying structure, patterns, and relationships sparked a curiosity that eventually led me from physics into pure mathematics.
@@ -225,7 +248,10 @@ Lately, I've also become increasingly interested in formalization and the growin
 When I'm not thinking about categories, networks, or formal proofs, I'm often exploring new technologies, learning new tools, and building projects that help me better understand the ideas I'm working with. I enjoy the process of learning, experimenting, and connecting concepts across different fields.
 
 At heart, I'm driven by curiosity. Whether I'm studying mathematics, exploring technology, or formalizing proofs, I'm always looking for the structures that tie things together and help us see the bigger picture.
-      </p>
+        </p>
+      </div>
+
+      <img class="profile-image" src="images/profile.jpg" alt="Portrait of Fabrice">
     </section>
 
     <section id="research-panel" role="tabpanel" aria-labelledby="research-tab" class="card" hidden>
