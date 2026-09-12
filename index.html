@@ -143,6 +143,43 @@
       padding: 1.5rem;
     }
 
+    .video-link {
+      display: block;
+      color: var(--text);
+      text-decoration: none;
+      margin-top: 1rem;
+    }
+
+    .video-link:hover .video-title,
+    .video-link:focus .video-title {
+      color: var(--accent);
+    }
+
+    .video-card {
+      display: grid;
+      grid-template-columns: 220px minmax(0, 1fr);
+      gap: 1rem;
+      align-items: center;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 0.75rem;
+      background: #fff;
+    }
+
+    .video-thumb {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      object-fit: cover;
+    }
+
+    .video-title {
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
     .home-layout {
       display: grid;
       grid-template-columns: minmax(0, 1fr) 220px;
@@ -254,11 +291,17 @@ At heart, I'm driven by curiosity. Whether I'm studying mathematics, exploring t
     </section>
 
     <section id="research-panel" role="tabpanel" aria-labelledby="research-tab" class="card" hidden>
-      <h2 id="research-heading">Research Interests</h2>
+      <h2 id="research-heading">Seminar &amp; Talks</h2>
       <p>
-        My work focuses on pure mathematics and the study of abstract
-        mathematical structures, rigorous proofs, and theoretical questions.
+        I share talks and seminar recordings related to mathematics, theory, and broader conversations at the intersection of ideas and society.
       </p>
+
+      <a class="video-link" href="https://www.youtube.com/watch?v=RAc5rkzuMew" target="_blank" rel="noopener noreferrer" aria-label="Watch the YouTube talk: Dialectics between Mathematics and Social Revolution, Math Club 11/14/2025, Fabrice speaking.">
+        <div class="video-card">
+          <img class="video-thumb" src="https://img.youtube.com/vi/RAc5rkzuMew/hqdefault.jpg" alt="Thumbnail for the talk Dialectics between Mathematics and Social Revolution, Math Club 11/14/2025, Fabrice speaking.">
+          <div class="video-title">Dialectics between Mathematics and Social Revolution, Math Club 11/14/2025, Fabrice speaking.</div>
+        </div>
+      </a>
     </section>
 
     <section id="books-panel" role="tabpanel" aria-labelledby="books-tab" class="card" hidden>
