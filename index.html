@@ -45,14 +45,37 @@
     }
 
     header {
-      background: var(--surface);
+      position: relative;
+      display: flex;
+      align-items: center;
+      min-height: 360px;
+      color: #fff;
+      background-color: #17202e;
+      background-image:
+        linear-gradient(90deg, rgba(10, 18, 30, 0.78), rgba(10, 18, 30, 0.22)),
+        url("images/cooper-library-night.jpg");
+      background-size: cover;
+      background-position: center 52%;
       border-bottom: 1px solid var(--border);
-      padding: 3rem 1rem;
+      padding: 4rem 1rem;
     }
 
     .site-header {
+      width: 100%;
       max-width: var(--max-width);
       margin: 0 auto;
+      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+    }
+
+    .header-photo-credit {
+      position: absolute;
+      right: 1rem;
+      bottom: 0.75rem;
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+      color: #fff;
+      background: rgba(10, 18, 30, 0.75);
+      font-size: 0.7rem;
     }
 
     .tabs {
@@ -202,7 +225,7 @@
       display: block;
       width: 100%;
       height: 220px;
-      object-fit: cover;
+      object-fit: contain;
       border-radius: 8px;
       border: 1px solid var(--border);
       background: #f8fafc;
@@ -264,7 +287,12 @@
 
     @media (max-width: 600px) {
       header {
-        padding: 2rem 1rem;
+        min-height: 300px;
+        padding: 3rem 1rem;
+        background-position: 65% center;
+        background-image:
+          linear-gradient(rgba(10, 18, 30, 0.62), rgba(10, 18, 30, 0.62)),
+          url("images/cooper-library-night.jpg");
       }
 
       .tab-list {
@@ -301,6 +329,7 @@
         PhD student in math at Clemson University.
       </p>
     </div>
+    <a class="header-photo-credit" href="https://www.pinterest.com/pin/library-snow-storm-at-night--110760472063854808/" target="_blank" rel="noopener noreferrer">Photo: Ken Scar</a>
   </header>
 
   <nav class="tabs" aria-label="Main navigation">
@@ -362,74 +391,74 @@ At heart, I'm driven by curiosity. Whether I'm studying mathematics, exploring t
         <h3>Math Books</h3>
         <div class="book-grid">
           <article class="book-card">
-            <img class="book-cover" src="https://covers.openlibrary.org/b/isbn/9780387984032-L.jpg" alt="Categories for the Working Mathematician cover" onerror="this.onerror=null;this.src='https://placehold.co/600x900/e2e8f0/1e293b?text=Categories';">
+            <img class="book-cover" src="images/books/categories-for-the-working-mathematician.jpg" alt="Categories for the Working Mathematician cover" onerror="this.onerror=null;this.src='images/books/cover-unavailable.svg';">
             <div class="book-meta">
               <h4>Categories for the Working Mathematician</h4>
               <p class="book-author">Saunders Mac Lane</p>
-              <p>A classic and highly readable introduction to category theory for mathematicians who want the conceptual language of modern mathematics.</p>
+              <p>My reading focused on limits and adjunctions. I was especially interested in how these ideas express relationships between mathematical objects and connect different constructions through a common language.</p>
             </div>
           </article>
 
           <article class="book-card">
-            <img class="book-cover" src="https://covers.openlibrary.org/b/isbn/9780521441803-L.jpg" alt="Handbook of Categorical Algebra cover" onerror="this.onerror=null;this.src='https://placehold.co/600x900/e2e8f0/1e293b?text=Categorical+Algebra';">
+            <img class="book-cover" src="images/books/handbook-of-categorical-algebra.jpg" alt="Handbook of Categorical Algebra cover" onerror="this.onerror=null;this.src='images/books/cover-unavailable.svg';">
             <div class="book-meta">
               <h4>Handbook of Categorical Algebra</h4>
               <p class="book-author">Francis Borceux</p>
-              <p>A comprehensive three-volume reference on categorical algebra, covering foundational ideas and advanced developments with great depth.</p>
+              <p>I approached this book with a particular interest in the relationship between sheaves and locales. That connection was the thread I followed through its broader treatment of categorical algebra.</p>
             </div>
           </article>
 
           <article class="book-card">
-            <img class="book-cover" src="https://covers.openlibrary.org/b/isbn/9780486445481-L.jpg" alt="Topoi: The Categorical Analysis of Logic cover" onerror="this.onerror=null;this.src='https://placehold.co/600x900/e2e8f0/1e293b?text=Topoi';">
+            <img class="book-cover" src="images/books/topoi.jpg" alt="Topoi: The Categorical Analysis of Logic cover" onerror="this.onerror=null;this.src='images/books/cover-unavailable.svg';">
             <div class="book-meta">
               <h4>Topoi: The Categorical Analysis of Logic</h4>
               <p class="book-author">Robert Goldblatt</p>
-              <p>An elegant and accessible introduction to topos theory, especially useful for understanding the connection between logic and category theory.</p>
+              <p>I'm still at page 120, so this one is very much a work in progress. I'm taking my time with the ideas as I explore the connections between category theory and logic.</p>
             </div>
           </article>
 
           <article class="book-card">
-            <img class="book-cover" src="https://covers.openlibrary.org/b/isbn/9780471433347-L.jpg" alt="Abstract Algebra cover" onerror="this.onerror=null;this.src='https://placehold.co/600x900/e2e8f0/1e293b?text=Abstract+Algebra';">
+            <img class="book-cover" src="images/books/abstract-algebra.jpg" alt="Abstract Algebra cover" onerror="this.onerror=null;this.src='images/books/cover-unavailable.svg';">
             <div class="book-meta">
               <h4>Abstract Algebra</h4>
               <p class="book-author">David Dummit &amp; Richard Foote</p>
-              <p>A standard graduate-level algebra text that balances rigor, structure, and breadth, covering groups, rings, fields, and modules in depth.</p>
+              <p>Thanks to Jim Coykendall's class, I have at least some familiarity with most of the topics here. There is still plenty to understand more deeply, but the book feels like familiar territory.</p>
             </div>
           </article>
 
           <article class="book-card">
-            <img class="book-cover" src="https://covers.openlibrary.org/b/isbn/9780028801018-L.jpg" alt="The World of Mathematics cover" onerror="this.onerror=null;this.src='https://placehold.co/600x900/e2e8f0/1e293b?text=World+of+Mathematics';">
+            <img class="book-cover" src="images/books/the-world-of-mathematics.jpg" alt="The World of Mathematics cover" onerror="this.onerror=null;this.src='images/books/cover-unavailable.svg';">
             <div class="book-meta">
               <h4>The World of Mathematics</h4>
               <p class="book-author">James R. Newman (editor)</p>
-              <p>A classic collection of essays and reflections that trace the intellectual history and cultural richness of mathematics across many domains.</p>
+              <p>I read this to get a feel for how people in earlier times thought about mathematics and put their ideas into writing. I haven't read it straight through; I jump between essays, following whatever catches my curiosity.</p>
             </div>
           </article>
 
           <article class="book-card">
-            <img class="book-cover" src="https://covers.openlibrary.org/b/isbn/9780521553745-L.jpg" alt="Stone Spaces cover" onerror="this.onerror=null;this.src='https://placehold.co/600x900/e2e8f0/1e293b?text=Stone+Spaces';">
+            <img class="book-cover" src="images/books/stone-spaces.jpg" alt="Stone Spaces cover" onerror="this.onerror=null;this.src='images/books/cover-unavailable.svg';">
             <div class="book-meta">
               <h4>Stone Spaces</h4>
               <p class="book-author">Peter T. Johnstone</p>
-              <p>A foundational text on Stone duality and the topology of spectra, especially relevant for those interested in logic, lattices, and point-free topology.</p>
+              <p>This is my favorite topology book. Its meeting of topology, logic, and algebra is especially close to the kinds of mathematical connections I enjoy exploring.</p>
             </div>
           </article>
 
           <article class="book-card">
-            <img class="book-cover" src="https://covers.openlibrary.org/b/isbn/9783034932581-L.jpg" alt="Frames and Locales cover" onerror="this.onerror=null;this.src='https://placehold.co/600x900/e2e8f0/1e293b?text=Frames+and+Locales';">
+            <img class="book-cover" src="images/books/frames-and-locales.jpg" alt="Frames and Locales cover" onerror="this.onerror=null;this.src='images/books/cover-unavailable.svg';">
             <div class="book-meta">
               <h4>Frames and Locales: Topology Without Points</h4>
               <p class="book-author">Jorge Picado &amp; Aleš Pultr</p>
-              <p>A modern introduction to point-free topology, emphasizing locales and frames as tools for understanding topology without relying on points.</p>
+              <p>My master's work focused on frames and locales, so this book has a special place in my mathematical journey. For me, its study of topology without points is tied to a subject I spent a substantial part of my studies exploring.</p>
             </div>
           </article>
 
           <article class="book-card">
-            <img class="book-cover" src="https://covers.openlibrary.org/b/isbn/9781482297277-L.jpg" alt="Algebraic and Combinatorial Algebra cover" onerror="this.onerror=null;this.src='https://placehold.co/600x900/e2e8f0/1e293b?text=Algebraic+and+Combinatorial+Algebra';">
+            <img class="book-cover" src="images/books/algebraic-and-combinatorial-computational-biology.jpg" alt="Algebraic and Combinatorial Computational Biology cover" onerror="this.onerror=null;this.src='images/books/cover-unavailable.svg';">
             <div class="book-meta">
-              <h4>Algebraic and Combinatorial Algebra</h4>
-              <p class="book-author">Matthew Macauley</p>
-              <p>A useful reference for the intersection of algebra and combinatorial thinking, especially for students drawn to structure, symmetry, and pattern.</p>
+              <h4>Algebraic and Combinatorial Computational Biology</h4>
+              <p class="book-author">Raina Robeva &amp; Matthew Macauley (editors)</p>
+              <p>This is where I learned about Boolean networks. That introduction connects directly to my current research, where I explore how category theory can help describe and understand these networks.</p>
             </div>
           </article>
         </div>
