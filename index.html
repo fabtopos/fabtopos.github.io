@@ -12,6 +12,7 @@
       --surface: #f8fafc;
       --text: #1e293b;
       --accent: #2563eb;
+      --clemson-orange: #f56600;
       --border: #dbe2ea;
       --max-width: 800px;
     }
@@ -310,6 +311,46 @@
       align-items: start;
     }
 
+    .about-intro {
+      margin-bottom: 1.25rem;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.85rem;
+    }
+
+    .about-tile {
+      padding: 1rem;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: #fff;
+    }
+
+    .about-tile h3 {
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+      margin: 0 0 0.45rem;
+      font-size: 1rem;
+      line-height: 1.35;
+    }
+
+    .about-tile p {
+      margin: 0;
+      font-size: 0.94rem;
+      line-height: 1.6;
+    }
+
+    .tiger-paw {
+      flex: 0 0 auto;
+      width: 25px;
+      height: 25px;
+      color: var(--clemson-orange);
+      fill: currentColor;
+    }
+
     .profile-image {
       width: 100%;
       border-radius: 12px;
@@ -366,6 +407,10 @@
         grid-template-columns: 1fr;
       }
 
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
       .hobby-gallery {
         grid-template-columns: 1fr;
       }
@@ -403,21 +448,29 @@
     <section id="home-panel" role="tabpanel" aria-labelledby="home-tab" class="home-layout">
       <div class="card">
         <h2 id="about-heading">About Me</h2>
-        <p>
-        Hi there, I'm Fabrice, a PhD student in mathematics at Clemson University with a passion for understanding the structures that shape complex systems.
-
-My journey into mathematics began through physics. After earning degrees in Theoretical Physics from the University of Antananarivo, I found myself increasingly drawn to the mathematical ideas that lay beneath the formulas. The search for underlying structure, patterns, and relationships sparked a curiosity that eventually led me from physics into pure mathematics.
-
-Today, my research focuses on applying category theory to Boolean networks. I'm interested in how categorical methods can help capture, describe, and model these networks in a way that reveals deeper structural insights. More broadly, I'm fascinated by the power of abstraction and by how mathematical frameworks can uncover connections between seemingly different ideas.
-
-Among the many areas of mathematics, topos theory has particularly captured my imagination. I appreciate its unifying perspective and its ability to bridge different branches of mathematics through a common language of structure and logic.
-
-Lately, I've also become increasingly interested in formalization and the growing relationship between mathematics and artificial intelligence. The possibility of using proof assistants and AI-driven tools to support mathematical discovery, verification, and communication is something I find both exciting and full of potential.
-
-When I'm not thinking about categories, networks, or formal proofs, I'm often exploring new technologies, learning new tools, and building projects that help me better understand the ideas I'm working with. I enjoy the process of learning, experimenting, and connecting concepts across different fields.
-
-At heart, I'm driven by curiosity. Whether I'm studying mathematics, exploring technology, or formalizing proofs, I'm always looking for the structures that tie things together and help us see the bigger picture.
-        </p>
+        <p class="about-intro">Hi, I'm Fabrice, a mathematics PhD student at Clemson University. How did I get here? The story involves a neutrino, a runaway cat, and an accidental visit to the math department.</p>
+        <div class="about-grid">
+          <article class="about-tile">
+            <h3><svg class="tiger-paw" viewBox="0 0 40 40" aria-hidden="true"><ellipse cx="10" cy="10" rx="4.4" ry="6"/><ellipse cx="20" cy="7" rx="4.4" ry="6"/><ellipse cx="30" cy="10" rx="4.4" ry="6"/><ellipse cx="35" cy="19" rx="3.8" ry="5"/><path d="M20 15c-5 0-8 5-11 10-3 6 1 10 6 8 3-1 5-2 8-1 5 2 10 1 10-4 0-5-6-13-13-13z"/></svg>A neutrino walks into a bar...</h3>
+            <p>I earned degrees in Theoretical Physics at the University of Antananarivo, and my work was in particle physics. Eventually, I got tired of chasing particles. Then a neutrino walked into a bar and Schr&ouml;dinger's cat ran out. &ldquo;Finally, something I can catch!&rdquo; I thought. So I chased the cat.</p>
+          </article>
+          <article class="about-tile">
+            <h3><svg class="tiger-paw" viewBox="0 0 40 40" aria-hidden="true"><ellipse cx="10" cy="10" rx="4.4" ry="6"/><ellipse cx="20" cy="7" rx="4.4" ry="6"/><ellipse cx="30" cy="10" rx="4.4" ry="6"/><ellipse cx="35" cy="19" rx="3.8" ry="5"/><path d="M20 15c-5 0-8 5-11 10-3 6 1 10 6 8 3-1 5-2 8-1 5 2 10 1 10-4 0-5-6-13-13-13z"/></svg>The cat became a category</h3>
+            <p>The cat accidentally led me into the math department. I finally caught it, but everyone called it a &ldquo;category.&rdquo; Apparently, even cats get longer names here. I stayed to study category theory, which explores mathematical objects through their relationships. Now I apply it to Boolean networks: think of connected switches whose on/off states follow rules.</p>
+          </article>
+          <article class="about-tile">
+            <h3><svg class="tiger-paw" viewBox="0 0 40 40" aria-hidden="true"><ellipse cx="10" cy="10" rx="4.4" ry="6"/><ellipse cx="20" cy="7" rx="4.4" ry="6"/><ellipse cx="30" cy="10" rx="4.4" ry="6"/><ellipse cx="35" cy="19" rx="3.8" ry="5"/><path d="M20 15c-5 0-8 5-11 10-3 6 1 10 6 8 3-1 5-2 8-1 5 2 10 1 10-4 0-5-6-13-13-13z"/></svg>Now the cat needs a home</h3>
+            <p>Where do you put a cat that has become a category? That brings me to my fascination with topos theory. I like to imagine it as a meeting place where different branches of mathematics can understand one another through a shared language of structure and logic. The cat would probably prefer a cardboard box.</p>
+          </article>
+          <article class="about-tile">
+            <h3><svg class="tiger-paw" viewBox="0 0 40 40" aria-hidden="true"><ellipse cx="10" cy="10" rx="4.4" ry="6"/><ellipse cx="20" cy="7" rx="4.4" ry="6"/><ellipse cx="30" cy="10" rx="4.4" ry="6"/><ellipse cx="35" cy="19" rx="3.8" ry="5"/><path d="M20 15c-5 0-8 5-11 10-3 6 1 10 6 8 3-1 5-2 8-1 5 2 10 1 10-4 0-5-6-13-13-13z"/></svg>The computer wants proof</h3>
+            <p>&ldquo;I caught the cat,&rdquo; I told the computer. &ldquo;Prove it,&rdquo; it replied. That is the spirit of my growing interest in formalization: writing mathematics precisely enough for a proof assistant to check each step. I'm also curious about how AI can help us discover and explain mathematical ideas. The cat has declined to provide evidence.</p>
+          </article>
+          <article class="about-tile">
+            <h3><svg class="tiger-paw" viewBox="0 0 40 40" aria-hidden="true"><ellipse cx="10" cy="10" rx="4.4" ry="6"/><ellipse cx="20" cy="7" rx="4.4" ry="6"/><ellipse cx="30" cy="10" rx="4.4" ry="6"/><ellipse cx="35" cy="19" rx="3.8" ry="5"/><path d="M20 15c-5 0-8 5-11 10-3 6 1 10 6 8 3-1 5-2 8-1 5 2 10 1 10-4 0-5-6-13-13-13z"/></svg>Still following paw prints</h3>
+            <p>While the cat naps, I explore new technologies, learn tools, and build projects to understand the ideas I'm working with. Curiosity keeps sending me between subjects, looking for connections and the bigger picture. I thought catching the cat would be the end of the adventure. Apparently, it was the admissions process.</p>
+          </article>
+        </div>
       </div>
 
       <img class="profile-image" src="images/profile.jpg" alt="Portrait of Fabrice">
