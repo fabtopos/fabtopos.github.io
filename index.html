@@ -263,6 +263,46 @@
       font-size: 0.85rem;
     }
 
+    .hobby-section + .hobby-section {
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .hobby-section h3 {
+      margin: 0 0 1rem;
+      font-size: 1.15rem;
+    }
+
+    .hobby-gallery {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+      align-items: start;
+    }
+
+    .hobby-photo {
+      display: block;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+
+    .hobby-photo-wide {
+      grid-column: 1 / -1;
+    }
+
+    .hobby-photo img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .hobby-photo-single {
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
     .home-layout {
       display: grid;
       grid-template-columns: minmax(0, 1fr) 220px;
@@ -323,6 +363,10 @@
       }
 
       .home-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .hobby-gallery {
         grid-template-columns: 1fr;
       }
 
@@ -514,11 +558,60 @@ At heart, I'm driven by curiosity. Whether I'm studying mathematics, exploring t
 
     <section id="hobbies-panel" role="tabpanel" aria-labelledby="hobbies-tab" class="card" hidden>
       <h2 id="hobbies-heading">Hobbies</h2>
-      <p>
-        Outside mathematics, I enjoy discovering interesting technology,
-        working on personal projects, reading, and finding new ways to stay
-        curious and creative.
-      </p>
+      <div class="hobby-section">
+        <h3>I love hiking with my friends</h3>
+        <div class="hobby-gallery">
+          <a class="hobby-photo hobby-photo-wide" href="images/Hobbies/FB_IMG_1759593387688.jpg">
+            <img src="images/Hobbies/FB_IMG_1759593387688.jpg" alt="Friends gathered at a mountain overlook on a sunny hike" width="1440" height="1080" loading="lazy" decoding="async">
+          </a>
+          <a class="hobby-photo" href="images/Hobbies/IMG-20251127-WA0000.jpg">
+            <img src="images/Hobbies/IMG-20251127-WA0000.jpg" alt="A selfie with a friend during a mountain hike" width="1200" height="1600" loading="lazy" decoding="async">
+          </a>
+          <a class="hobby-photo" href="images/Hobbies/IMG-20260518-WA0005.jpg">
+            <img src="images/Hobbies/IMG-20260518-WA0005.jpg" alt="Friends posing together above the forest at a mountain viewpoint" width="768" height="1024" loading="lazy" decoding="async">
+          </a>
+        </div>
+      </div>
+      <div class="hobby-section">
+        <h3>Paddle boarding with Ida</h3>
+        <a class="hobby-photo hobby-photo-single" href="images/Hobbies/IMG-20260524-WA0018.jpg">
+          <img src="images/Hobbies/IMG-20260524-WA0018.jpg" alt="Paddle boarding with Ida on a sunny lake" width="768" height="1024" loading="lazy" decoding="async">
+        </a>
+      </div>
+      <div class="hobby-section">
+        <h3>Snow tubing and snowy days</h3>
+        <div class="hobby-gallery">
+          <a class="hobby-photo" href="images/Hobbies/IMG_20260207_114058319.jpg">
+            <img src="images/Hobbies/web/IMG_20260207_114058319.jpg" alt="Ready for snow tubing on a sunny winter day" width="1200" height="1600" loading="lazy" decoding="async">
+          </a>
+          <a class="hobby-photo" href="images/Hobbies/IMG_20250110_101919619.jpg">
+            <img src="images/Hobbies/web/IMG_20250110_101919619.jpg" alt="Enjoying a warm drink outdoors as snow falls" width="1200" height="1600" loading="lazy" decoding="async">
+          </a>
+        </div>
+      </div>
+      <div class="hobby-section">
+        <h3>Building together</h3>
+        <a class="hobby-photo" href="images/Hobbies/IMG-20260316-WA0002.jpg">
+          <img src="images/Hobbies/web/IMG-20260316-WA0002.jpg" alt="Working together on an outdoor building project in snowy weather" width="1600" height="1200" loading="lazy" decoding="async">
+        </a>
+      </div>
+      <div class="hobby-section">
+        <h3>Spending time with friends</h3>
+        <a class="hobby-photo" href="images/Hobbies/web/IMG_20250523_071112.jpg">
+          <img src="images/Hobbies/web/IMG_20250523_071112.jpg" alt="A group of friends together beneath a pink evening sky" width="1600" height="1200" loading="lazy" decoding="async">
+        </a>
+      </div>
+      <div class="hobby-section">
+        <h3>Exploring Washington, D.C.</h3>
+        <div class="hobby-gallery">
+          <a class="hobby-photo" href="images/Hobbies/web/IMG_20260108_083315.jpg">
+            <img src="images/Hobbies/web/IMG_20260108_083315.jpg" alt="Visiting the United States Capitol in Washington, D.C." width="1200" height="1600" loading="lazy" decoding="async">
+          </a>
+          <a class="hobby-photo" href="images/Hobbies/web/IMG_20260108_152951.jpg">
+            <img src="images/Hobbies/web/IMG_20260108_152951.jpg" alt="A group photo during a visit to an office in Washington, D.C." width="1200" height="1600" loading="lazy" decoding="async">
+          </a>
+        </div>
+      </div>
     </section>
   </main>
 
